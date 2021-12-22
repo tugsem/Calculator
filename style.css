@@ -1,0 +1,122 @@
+html{
+    min-height: 100vh;
+}
+
+body{
+    margin:100px 0 200px 0;
+    background-color: black;
+}
+
+.container{
+    margin: 0;
+    background-color: black;
+    color:white;
+    font-size: 2rem; 
+    display: grid;
+    grid-template-columns: auto 400px auto;
+    grid-template-rows: 600px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.calculator{
+   display: grid;
+   grid-column: 2 / 3;
+   grid-template-rows: 1fr 2fr;
+   border: 2px solid rgb(46, 45, 45);
+   border-radius: 20px;
+}
+
+.display{
+    display: grid;
+    grid-row: 1/2;
+    border-bottom: 2px solid rgb(59, 59, 59);
+    margin: 0; 
+    padding: 15px;
+    grid-template-rows: 30%  30% 40%;
+    text-align: right;
+    
+}
+
+#first{
+  
+   grid-row: 1/ 2;
+   max-width: 100%;
+   min-width: 0;
+   overflow-y: auto;
+   
+}
+
+#second{
+  
+    grid-row: 2/ 3;
+    max-width: 100%;
+    min-width: 0;
+    overflow-y: auto;
+}
+
+.result{
+    display: grid;
+    grid-row: 3 / 4;
+    grid-template-rows: 70% 30%;
+   
+}
+#result{
+    width:100%;
+    overflow-y: auto;
+    margin: 0;
+    color:grey;
+    font-size: large;
+}
+#icon{
+    grid-row: 2/ 3;
+    border: 1px solid rgba(128, 255, 0, 0.61);
+    text-align: center;
+    font-size: small;
+    width: 8%;
+    height: fit-content;
+    color:rgba(128, 255, 0, 0.61) ;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-left: 335px;
+    cursor: pointer;
+    
+   
+}
+#icon:hover{
+    background-color: rgba(150, 150, 150, 0.836);
+    
+}
+.btn{
+    display: flex;
+    border: 2px solid rgb(102, 102, 102);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(19, 18, 22, 0.877); 
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgba(150, 150, 150, 0.836);
+}
+
+.keys{
+   display: grid;
+   grid-row: 2 / 3 ;
+   grid-gap: 2%;
+   margin: 10px;
+   grid-template-columns: repeat(4, 1fr);   
+}
+
+#C{
+    color: rgb(209, 128, 99);
+}
+
+.op{
+    color: rgba(128, 255, 0, 0.61);
+}
+
+#equal{
+    background-color:rgba(128, 255, 0, 0.61) ;
+}
